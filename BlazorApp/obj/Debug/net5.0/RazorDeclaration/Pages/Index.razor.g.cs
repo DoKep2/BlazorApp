@@ -90,6 +90,25 @@ using BlazorApp.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 11 "C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\Pages\Index.razor"
+      
+
+    private List<Game> Games;
+
+    protected override void OnInitialized()
+    {
+        Games = new List<Game>()
+        {
+            new Game("Game4", "Genre4", 4),
+            new Game("Game5", "Genre5", 5),
+        };
+    }
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

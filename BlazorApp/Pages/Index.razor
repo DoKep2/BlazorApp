@@ -6,4 +6,19 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?"/>
 
-<Counter IncrementAmount="10"/>
+<GamesList Games="Games"/>
+<IndividualGame Game="new Game(1.ToString(), 1.ToString(), 1)" IsTable="false" DisplayButton="false"/>
+@code{
+
+    private List<Game> Games;
+
+    protected override void OnInitialized()
+    {
+        Games = new List<Game>()
+        {
+            new Game("Game4", "Genre4", 4),
+            new Game("Game5", "Genre5", 5),
+        };
+    }
+
+}

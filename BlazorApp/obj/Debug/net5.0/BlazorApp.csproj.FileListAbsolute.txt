@@ -632,3 +632,7 @@ C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\ref\BlazorApp.
 C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\BlazorApp.pdb
 C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Pages\Todo.razor.g.cs
 C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\Razor\Pages\Todo.razor.g.cs
+C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Shared\GamesList.razor.g.cs
+C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\Razor\Shared\GamesList.razor.g.cs
+C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Shared\IndividualGame.razor.g.cs
+C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\Razor\Shared\IndividualGame.razor.g.cs
