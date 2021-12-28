@@ -96,6 +96,9 @@ using BlazorApp.Shared;
 
     private List<Game> Games;
 
+    Random rnd;
+    Game GameToShow;
+
     protected override void OnInitialized()
     {
         Games = new List<Game>()
@@ -103,8 +106,32 @@ using BlazorApp.Shared;
             new Game("Game4", "Genre4", 4),
             new Game("Game5", "Genre5", 5),
         };
+        rnd = new Random(DateTime.Now.Millisecond);
+        GameToShow = Games[rnd.Next(0, Games.Count)];
     }
 
+    void ShowNewGame()
+    {
+        GameToShow = SwitchGame();
+    }
+    Game SwitchGame()
+    {
+        Game tempGame = null;
+        switch (Games.Count)
+        {
+            case >=2:
+                int iterator = rnd.Next(0, Games.Count);
+                tempGame = Games[iterator];
+                break;
+            case 1:
+                tempGame = Games[0];
+                break;
+            default:
+                tempGame = new Game("Unknown game", "", DateTime.Now.Year);
+                break;
+        }
+        return tempGame;
+    }
 
 #line default
 #line hidden

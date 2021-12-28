@@ -91,14 +91,12 @@ using BlazorApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\Pages\Counter.razor"
+#line 26 "C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\Pages\Counter.razor"
        
     private int currentCount = 0;
-    [Parameter]
-    public int IncrementAmount { get; set; } = 1;
     private void IncrementCount()
     {
-        currentCount += IncrementAmount;
+        currentCount++;
     }
 
 

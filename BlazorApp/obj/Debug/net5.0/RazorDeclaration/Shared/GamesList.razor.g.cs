@@ -97,6 +97,11 @@ using BlazorApp.Shared;
 
     private bool displayButton = false;
 
+    private void DeleteGame(Game game)
+    {
+        Games.Remove(game);
+    }
+
 #line default
 #line hidden
 #nullable disable

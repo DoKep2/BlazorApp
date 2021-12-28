@@ -1,18 +1,33 @@
 @page "/counter"
 
-<h1>Counter</h1>
+<div class="row">
+    <div class="col alert alert-secondary text-center">
+        <h1>COUNTER</h1>
+    </div>
+</div>
 
-<p>Current count: @currentCount</p>
+<div class="row">
+    <div class="col-6 text-left">
+        <button class="btn btn-primary p-3" @onclick="IncrementCount">Click me</button>
+    </div>
+    <div class="col-6 text-right">
+        <div style="font-size: 50px">@currentCount</div>
+    </div>
+</div>
 
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<div class="row">
+    <div class="col text-center">
+        <input type="number" class="form-control-lg" @bind="currentCount" />
+    </div>
+</div>
+
+
 
 @code {
     private int currentCount = 0;
-    [Parameter]
-    public int IncrementAmount { get; set; } = 1;
     private void IncrementCount()
     {
-        currentCount += IncrementAmount;
+        currentCount++;
     }
 
 }

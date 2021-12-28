@@ -12,14 +12,9 @@
     {
         <div class="row">
             <div class="col">
-                <button class="btn btn-danger" @onclick="Delete">Delete</button>
+                <button class="btn btn-danger" @onclick="(() => SwitchGame.InvokeAsync())">Switch Game</button>
             </div>
             <div class="col">
-                @if (Message != null)
-                {
-                    <span class="text-danger">@Message</span>
-                    Message = null;
-                }
             </div>
         </div>
     }
@@ -29,16 +24,11 @@ else
     <tr>
         <td>@Game.Name</td>
         <td>@Game.Genre</td>
-        <td>@Game.Year</td>
+        <td>@Game.Year</td> 
         <td>
             @if (DisplayButton)
             {
-                <button class="btn btn-danger" @onclick="Delete">Delete</button>
-                @if (Message != null)
-                {
-                    <span class="text-danger pl-3">@Message</span>
-                    Message = null;
-                }
+                <button class="btn btn-danger" @onclick="(() => DeleteGame.InvokeAsync(Game))">Delete</button>
             }
         </td>
     </tr>
@@ -46,12 +36,7 @@ else
 @code {
     [Parameter] public Game Game { get; set; }
     [Parameter] public bool IsTable { get; set; }
-
-    [Parameter]
-    public bool DisplayButton { get; set; }
-    private string Message { get; set; }
-    private void Delete()
-    {
-        Message = $"Game {Game.Name} deleted";
-    }
+    [Parameter] public bool DisplayButton { get; set; }
+    [Parameter] public EventCallback<Game> DeleteGame { get; set; }
+    [Parameter] public EventCallback SwitchGame { get; set; }
 }

@@ -97,18 +97,13 @@ using System.Reflection.Metadata.Ecma335;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\Shared\IndividualGame.razor"
+#line 36 "C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\Shared\IndividualGame.razor"
        
     [Parameter] public Game Game { get; set; }
     [Parameter] public bool IsTable { get; set; }
-
-    [Parameter]
-    public bool DisplayButton { get; set; }
-    private string Message { get; set; }
-    private void Delete()
-    {
-        Message = $"Game {Game.Name} deleted";
-    }
+    [Parameter] public bool DisplayButton { get; set; }
+    [Parameter] public EventCallback<Game> DeleteGame { get; set; }
+    [Parameter] public EventCallback SwitchGame { get; set; }
 
 #line default
 #line hidden
