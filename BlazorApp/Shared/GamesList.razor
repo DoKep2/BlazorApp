@@ -11,28 +11,16 @@
         </tr>
         </thead>
         <tbody>
-        @if (Games == null)
-        {
-            <tr>LOADING...</tr>
-        }
-        else if(Games.Count == 0)
-        {
-            <tr>NO ITEMS IN ARRAY</tr>
-        }
-        else
-        {
-            @foreach (var game in Games)
-            {
-                <IndividualGame Game="game" IsTable="true" DisplayButton="displayButton" DeleteGame="DeleteGame"/>
-            }
-        }
+        <GenericList ListOfItems="Games">
+            <ItemTemplate Context="game">
+                <IndividualGame Game="game" IsTable="true" DisplayButton="displayButton" DeleteGame="DeleteGame"/>  
+            </ItemTemplate>
+        </GenericList>
         </tbody>
-    </table>
+        </table>
 </div>
 @code {
-    [Parameter]
-    public List<Game> Games { get; set; }
-
+    [Parameter] public List<Game> Games { get; set; }
     private bool displayButton = false;
 
     private void DeleteGame(Game game)

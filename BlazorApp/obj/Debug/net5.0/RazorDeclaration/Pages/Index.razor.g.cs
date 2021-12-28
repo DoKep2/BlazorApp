@@ -99,8 +99,9 @@ using BlazorApp.Shared;
     Random rnd;
     Game GameToShow;
 
-    protected override void OnInitialized()
+    protected  async override Task OnInitializedAsync()
     {
+        await Task.Delay(2000);
         Games = new List<Game>()
         {
             new Game("Game4", "Genre4", 4),

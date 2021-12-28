@@ -82,7 +82,7 @@ using BlazorApp.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class GamesList : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class GenericList<TItem> : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,15 +90,13 @@ using BlazorApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\Shared\GamesList.razor"
+#line 32 "C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\Shared\GenericList.razor"
        
-    [Parameter] public List<Game> Games { get; set; }
-    private bool displayButton = false;
-
-    private void DeleteGame(Game game)
-    {
-        Games.Remove(game);
-    }
+    
+    [Parameter] public RenderFragment NullList { get; set; }
+    [Parameter] public RenderFragment EmptyList { get; set; }   
+    [Parameter] public RenderFragment<TItem> ItemTemplate { get; set; }
+    [Parameter] public List<TItem> ListOfItems { get; set; }
 
 #line default
 #line hidden

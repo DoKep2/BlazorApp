@@ -636,3 +636,5 @@ C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\RazorDeclarati
 C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\Razor\Shared\GamesList.razor.g.cs
 C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Shared\IndividualGame.razor.g.cs
 C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\Razor\Shared\IndividualGame.razor.g.cs
+C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\RazorDeclaration\Shared\GenericList.razor.g.cs
+C:\Users\sergo\RiderProjects\BlazorApp\BlazorApp\obj\Debug\net5.0\Razor\Shared\GenericList.razor.g.cs
